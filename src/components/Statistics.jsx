@@ -6,7 +6,7 @@ export default function Statistics({ views }) {
     let numOfViews = 0;
     let avgPrice = 0;
 
-    if (views.length > 0) {
+   
         for (let i = 0; i < views.length; i++) {
             if (i === 0) {
                 places[views[i].settlement] = { numOfAllSettlemets: 1, fullPrice: views[i].price };
@@ -23,7 +23,6 @@ export default function Statistics({ views }) {
                 avgPrice += views[i].price;
             }
         }
-    };
 
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
